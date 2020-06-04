@@ -6,8 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import {openMobileMenu} from "../../utils/actions/index";
 import * as colors from '../../assets/color'
-import SLIDDER_1 from '../../assets/images/slidder.svg'
-import SLIDDER_2 from '../../assets/images/slidder_2.svg'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
@@ -74,23 +72,14 @@ const  SubHeaderContainer = (props, store) => {
 
             <Grid item xs={6}>
                 <div className={classes.headerWrapper}>                   
-                   <span className="headerText"> Transfers from airports and hotels in 
-                        <span style={{color: colors.mainPrimaryColor}}> 102 Countries </span> 
-                    </span>
-                    <Paper className={classes.searchWrapper}>
-                        <form noValidate autoComplete="off">
-                          <TextField id="standard-basic" label="From" placeholder="From (airport, city or train station)" />
-                          <TextField id="standard-basic" label="Standard" />
-                          <TextField id="standard-basic" label="Standard" />
-                          
-                        </form>
-                    </Paper>
+                 
+                   
                 </div>
             </Grid>
 
             <Grid item xs={6}>
                 <div className={classes.slidder}>
-                  <SLIDDER_2/>
+
                 </div>
             </Grid>
 

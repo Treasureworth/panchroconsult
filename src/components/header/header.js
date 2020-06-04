@@ -17,7 +17,7 @@ const useStyles = makeStyles({
       borderRadius: 4,
       boxShadow: `0 3px 5px 2px ${colors.shadowColor}`,
       color: 'white',
-      padding: '0.5rem 1.8rem',
+      padding: '0.8rem 1.8rem',
       cursor: "pointer",
       border: `0.1em solid ${colors.mainPrimaryColor}`,
       fontWeight: 500,
@@ -43,7 +43,7 @@ const useStyles = makeStyles({
       },
 
     content: {
-        padding: '1em 0 0.7em 0',
+        padding: '1.2em 0 1em 0',
         display: "flex",
         direction: "column",
         alignItems: "center",
@@ -52,7 +52,7 @@ const useStyles = makeStyles({
         fontSize: "1.1em"
     },
     headerWrapper: {
-        borderBottom: `0.1em solid ${colors.shadowColor}`
+       
     },
     mobileMenu: {
       position: "fixed",
@@ -66,7 +66,8 @@ const useStyles = makeStyles({
     mobileMenuItem: {
       margin: "2em 0px",
       fontSize: "1.1rem",
-      color: "white"
+      color: "white",
+      cursor: 'pointer'
     }
   });
 
@@ -103,31 +104,37 @@ const  HeaderContainer = (props, store) => {
                             
                             <div>
                             <Hidden mdDown>
-                                    Hotels
+                                    Home
                             </Hidden>
                             </div>
                             
                             <div>
                             <Hidden mdDown>
-                                    Customers
+                                    About Us
                             </Hidden>
                             </div>
 
                             <div>
                             <Hidden mdDown>
-                                    Partners
+                                    Contact
                             </Hidden>
                             </div>
 
                             <div>
                             <Hidden mdDown>
-                                    Car rental with driver
+                                    Portfolio
                             </Hidden>
                             </div>
 
                             <div>
                             <Hidden mdDown>
-                                    Support
+                                    Projects
+                            </Hidden>
+                            </div>
+
+                            <div>
+                            <Hidden mdDown>
+                                    Blog
                             </Hidden>
                             </div>
                     </div>
@@ -136,12 +143,9 @@ const  HeaderContainer = (props, store) => {
                                 justifyContent: "space-between"}}>         
                        
                       <Hidden mdDown>
-                            <div className={classes.button2}>
-                                    Sign up
-                            </div>
 
                             <div className={classes.button1}>
-                                    Login
+                            Subscribe for newsletters
                             </div>
                     </Hidden>
 
@@ -160,38 +164,37 @@ const  HeaderContainer = (props, store) => {
 
                                             onClick={() => menuToggleFunction()}/>
                             </div>
+
+                            
                             <div className={classes.mobileMenuItem}>
-                                    Hotels
+                                    Home
                             </div>
                             
                             <div className={classes.mobileMenuItem}>
-                                    Customers
+                                    About Us
                             </div>
 
                             <div className={classes.mobileMenuItem}>
-                                    Partners
+                                    Contact
                             </div>
 
                             <div className={classes.mobileMenuItem}>
-                                    Car rental with driver
+                                    Portfolio
                             </div>
 
                             <div className={classes.mobileMenuItem}>
-                                    Support
+                                    Projects
                             </div>
-                            <div className={classes.button2} style={{fontSize: "1.2rem", 
-                                                                     marginBottom: "2em", 
-                                                                     padding: "0.9rem 1.8rem",
-                                                                     justifyContent: "center",
-                                                                     display: "flex",
-                                                                     background:`${colors.faintSecondaryColor}`}}>
-                                    Sign up
+
+                            <div className={classes.mobileMenuItem}>
+                                    Blog
                             </div>
                             <div className={classes.button1} style={{fontSize: "1.2rem", 
                                                                      padding: "0.9rem 1.8rem",
                                                                      justifyContent: "center",
-                                                                     display: "flex"}}>
-                                    Login
+                                                                     display: "flex",
+                                                                     marginTop: '3em'}}>
+                                   Newsletters
                             </div>
                         </Paper>
                       </Grid>
@@ -202,7 +205,8 @@ const  HeaderContainer = (props, store) => {
                     <Hidden mdUp>
                             <MenuIcon style={{ fontSize: '2em', 
                                                float: "right", 
-                                               margin: "auto" }}
+                                               margin: "auto",
+                                              color: colors.mainPrimaryColor }}
                                       onClick={() => menuToggleFunction()}/>
                     </Hidden> 
                   </div>

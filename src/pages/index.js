@@ -9,7 +9,6 @@ import * as colors from '../assets/color'
 
 const useStyles = makeStyles({
   headerWrapper: {
-      backgroundColor: `${colors.faintSecondaryColor}`,
       minHeight: '50vh',
       padding: '2em'
   }
