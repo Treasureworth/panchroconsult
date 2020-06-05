@@ -8,6 +8,10 @@ import {openMobileMenu} from "../../utils/actions/index";
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import CancelIcon from '@material-ui/icons/Cancel';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import InstagramIcon from '@material-ui/icons/Instagram';
 import * as colors from '../../assets/color'
 
 const useStyles = makeStyles({
@@ -43,7 +47,7 @@ const useStyles = makeStyles({
       },
 
     content: {
-        padding: '1.2em 0 1em 0',
+        // padding: '1.2em 0 1em 0',
         display: "flex",
         direction: "column",
         alignItems: "center",
@@ -52,7 +56,14 @@ const useStyles = makeStyles({
         fontSize: "1.1em"
     },
     headerWrapper: {
-       
+    },
+    quickContact: {
+      background: colors.mainSecondaryColor,
+      minHeight: '3em',
+      padding: '.8em 0em',
+      color: colors.white,
+      fontSize: '1em',
+      fontWeight: 500
     },
     mobileMenu: {
       position: "fixed",
@@ -61,7 +72,8 @@ const useStyles = makeStyles({
       top: '0px',
       left: '0px',
       padding: '3rem 8rem 6rem 5rem',
-      backgroundColor: `${colors.mainSecondaryColor}`
+      backgroundColor: `${colors.mainSecondaryColor}`,
+      zIndex: 5000
     },
     mobileMenuItem: {
       margin: "2em 0px",
@@ -83,6 +95,37 @@ const  HeaderContainer = (props, store) => {
 
     return (
       <React.Fragment>
+        <div className={classes.quickContact}>
+            <Container>
+              <div style={{display: 'flex'}}>
+
+                <Grid item xs={8} md={10}>
+                    <div style={{display: 'flex'}}>
+                          <div>
+                            +2348023888504
+                          </div>
+                          <Hidden mdDown>
+                              <div style={{marginLeft: '1em'}}>
+                                info@panchroconsult.com
+                              </div>
+                          </Hidden>
+                          
+                    </div>
+                </Grid>
+
+                <Grid item xs>
+                  <div style={{display: 'flex', justifyContent: 'space-around'}}>
+                    <FacebookIcon/>
+                    <TwitterIcon/>
+                    <InstagramIcon/>
+                    <LinkedInIcon/>
+                  </div>
+                </Grid>
+            
+              </div>
+              
+            </Container>
+        </div>
         <div className={classes.headerWrapper}>
             <Container>
                 <div style={{display: 'flex', minWidth: "100%", justifyContent: 'space-between'}}>
@@ -94,12 +137,9 @@ const  HeaderContainer = (props, store) => {
                     
                             <div style={{display: 'flex', alignItems: "center"}}>
                                     <div>
-                                        <img src="../Skye-taxis-mini.png" style={{maxWidth: "4.2rem", marginRight: "0.5rem"}}/>
+                                        <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591316466/panchroconsult/Panchroconsult-logo_mini_xdhixj.png" 
+                                              style={{maxWidth: "7rem"}}/>
                                     </div>
-                                    <div style={{display: 'flex'}}>
-                                        <h1 style={{color: `${colors.mainSecondaryColor}`}}>Skye</h1>
-                                        <h1 style={{color: `${colors.mainPrimaryColor}`}}>Taxis</h1>
-                                </div>
                             </div>
                             
                             <div>

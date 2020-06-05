@@ -9,6 +9,7 @@ import * as colors from '../../assets/color'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
+import {Animated} from "react-animated-css";
 
 const useStyles = makeStyles({
     button1: {
@@ -46,7 +47,6 @@ const useStyles = makeStyles({
       display: 'flex', 
       alignItems: 'center', 
       justifyContent: 'flex-end', 
-      height: '100%'
     },
     searchWrapper: {
       minHeight: '4em',
@@ -68,23 +68,46 @@ const  SubHeaderContainer = (props, store) => {
     return (
       <React.Fragment>
         <Container maxWidth="lg">
-            <div style={{display: 'flex', alignContent: 'center', justifyContent: 'center', minHeight: '45vh'}}>
+            <div style={{display: 'flex', alignContent: 'center', justifyContent: 'center'}}>
 
-            <Grid item xs={6}>
-                <div className={classes.headerWrapper}>                   
+            <Hidden mdDown>
+              <Grid item xs={6} md>
+                  <div className={classes.headerWrapper}>    
                  
-                   
-                </div>
-            </Grid>
+                      <h1>
+                      <span style={{color: colors.mainPrimaryColor, fontSize: '1.5em'}}>Multidisciplinary professional </span> outfit of Environmental Planners, Remote sensing technology and Development Analysts making the world habitable.
+                      </h1> 
+            
+                  </div>
+              </Grid>
+            </Hidden>
 
-            <Grid item xs={6}>
+            <Grid item xs={12} md direction="row">
+              
                 <div className={classes.slidder}>
-
+                  <Animated animationIn="bounceInLeft" animationOut="fadeOut" animationInDuration={3000} isVisible={true}>
+                    <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591312727/panchroconsult/panchro_guy_h2jk0d.png" style={{maxHeight: '45vh'}}/>
+                  </Animated>
                 </div>
             </Grid>
 
             </div>
         </Container>
+        <Hidden mdUp>
+                <Grid item xs={12}>
+                    <div className={classes.headerWrapper} style={{backgroundColor: colors.backgroundColor, padding: '0em 1em'}}>  
+
+                    <Animated animationIn="slideInUp" animationOut="zoomOutDown" animationInDuration={1000} animationOutDuration={1000} isVisible={true}>
+                        <h1 style={{fontWeight: 400, 
+                                    lineHeight: '2', 
+                                    fontSize: '1.3em',
+                                    marginTop: '1.5em'}}>
+                        <span style={{color: colors.mainPrimaryColor, fontSize: '1em'}}>Multidisciplinary professional </span> outfit of Environmental Planners, Remote sensing technology and Development Analysts making the world habitable.
+                        </h1> 
+                    </Animated>                 
+                    </div>
+                </Grid>
+        </Hidden>
       </React.Fragment>
     );
   }

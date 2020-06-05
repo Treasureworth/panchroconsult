@@ -6,11 +6,14 @@ import HeaderContainer from "../components/header/header";
 import SubHeaderContainer from "../components/header/sub-header";
 import { makeStyles } from '@material-ui/core/styles';
 import * as colors from '../assets/color'
+import AboutUs from "../components/content/aboutus";
+import Services from "../components/content/services";
+import ContactUs from "../components/content/contact";
 
 const useStyles = makeStyles({
   headerWrapper: {
-      minHeight: '50vh',
-      padding: '2em'
+     minHeight: '45vh',
+     background: `linear-gradient(45deg, ${colors.background} 30%, ${colors.backgroungFaint} 90%)`,
   }
 });
 
@@ -25,6 +28,8 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="assets/styles.css"></link>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+
       </Head>
       
        <CssBaseline />
@@ -33,8 +38,19 @@ export default function Home() {
        <div className={classes.headerWrapper}>
         <SubHeaderContainer/>
        </div>
+
+         <div style={{marginTop: '2em', fontSize: '1.2em', }}>
+             <AboutUs/>
+         </div>
+
+         <div style={{marginTop: '2em', fontSize: '1.2em'}}>
+             <Services/>
+         </div>
+         <div style={{marginTop: '2em', fontSize: '1.2em', backgroundColor: colors.backgroungFaint}}>
+             <ContactUs/>
+         </div>
        
-      <Container maxWidth="lg">
+      
       <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -42,10 +58,10 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/Skye-taxis-logo.png" alt="Vercel Logo" className="logo" />
+          <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591316466/panchroconsult/Panchroconsult-logo_mini_xdhixj.png" 
+                                              style={{maxWidth: "8rem"}}/>
         </a>
       </footer>
-     </Container>
 
      <style jsx>{`
         .container {
@@ -67,12 +83,10 @@ export default function Home() {
   }
 
   footer {
-    width: 100%;
-    height: 100px;
+    width: 100vw;
     border-top: 1px solid #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: 'absolute';
+    bottom: '0px'
   }
 
   footer img {
@@ -189,7 +203,9 @@ export default function Home() {
         }
         h1{
           font-size: 1.5rem;
-          margin: 0px
+          margin: 0px;
+          z-index: 500;
+          line-height: 2em;
         }
         .headerText{
           font-size: 3.5em;

@@ -1,0 +1,1 @@
+export const google_key = "AIzaSyAQ07Ct7tniSipCZjpjROaH3yvw-qz1syU";
