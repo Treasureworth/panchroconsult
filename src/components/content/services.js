@@ -8,8 +8,7 @@ import {openMobileMenu} from "../../utils/actions/index";
 import * as colors from '../../assets/color'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
-import {Animated} from "react-animated-css";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const useStyles = makeStyles({
     content: {
@@ -58,9 +57,50 @@ const  Services = (props, store) => {
                </h1>
                 <Grid container spacing={4}>
                   
+                
                 <Grid item xs={12} sm={4}>
+                    <ScrollAnimation animateIn='fadeIn'>
                       <Paper className={classes.paper}>
-                              <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591360727/panchroconsult/shutterstock_401470402_kplk7c.jpg"
+                                <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591360727/panchroconsult/shutterstock_401470402_kplk7c.jpg"
+                                      width="100%" height="250px" className={classes.img}/>
+
+                                <div style={{display: 'flex', flexDirection: 'column'}}>
+                                  <span style={{padding: '0em 1em', 
+                                                color: colors.mainPrimaryColor,
+                                                fontSize: '1.1em',
+                                                fontWeight: 500}}>
+                                    Development Analysis and Project Management.
+                                  </span>
+                                  <span style={{padding: '0em 1em 1em 1em', textAlign: 'left'}}>
+                                    <p>
+                                    Project management.
+                                    </p>
+                                    <p>
+                                    Feasibility Studies to determine the appropriateness, 
+                                    profitability, etc of proposed developments.
+                                    </p>
+                                    <p>
+                                    Preparing, revising and developing planning and design 
+                                    guidelines.
+                                    </p>
+                                  </span>
+                                  {/* <div style={{display: 'flex', justifyContent: 'center'}}>
+                                    <a className={classes.button2} style={{width: '90%', marginBottom: '1em'}}>
+                                      Read more
+                                    </a>
+                                  </div> */}
+                                </div>
+                                
+                          </Paper>
+                    </ScrollAnimation>
+          
+                </Grid>
+  
+
+                    <Grid item xs={12} sm={4}>
+                        <ScrollAnimation animateIn='fadeIn'>
+                          <Paper className={classes.paper}>
+                              <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591360713/panchroconsult/shutterstock_59937847-_Converted_f1xycw.jpg"
                                     width="100%" height="250px" className={classes.img}/>
 
                               <div style={{display: 'flex', flexDirection: 'column'}}>
@@ -68,63 +108,30 @@ const  Services = (props, store) => {
                                               color: colors.mainPrimaryColor,
                                               fontSize: '1.1em',
                                               fontWeight: 500}}>
-                                  Development Analysis and Project Management.
+                                  Geographic Iinformation System and Remote sensing Services.
                                 </span>
                                 <span style={{padding: '0em 1em 1em 1em', textAlign: 'left'}}>
                                   <p>
-                                  Project management.
+                                  Supply and Analysis of Remotely Sensed Data.
                                   </p>
                                   <p>
-                                  Feasibility Studies to determine the appropriateness, 
-profitability, etc of proposed developments.
+                                  Implementing Functional GIS/Remote Sensing Units.
                                   </p>
                                   <p>
-                                  Preparing, revising and developing planning and design 
-guidelines.
+                                  Mapping Services.
+                                  </p>
+                                  <p>
+                                  Training.
                                   </p>
                                 </span>
-                                {/* <div style={{display: 'flex', justifyContent: 'center'}}>
-                                  <a className={classes.button2} style={{width: '90%', marginBottom: '1em'}}>
-                                    Read more
-                                  </a>
-                                </div> */}
                               </div>
                               
                           </Paper>
+                        </ScrollAnimation>
                     </Grid>
 
                     <Grid item xs={12} sm={4}>
-                      <Paper className={classes.paper}>
-                            <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591360713/panchroconsult/shutterstock_59937847-_Converted_f1xycw.jpg"
-                                  width="100%" height="250px" className={classes.img}/>
-
-                            <div style={{display: 'flex', flexDirection: 'column'}}>
-                              <span style={{padding: '0em 1em', 
-                                            color: colors.mainPrimaryColor,
-                                            fontSize: '1.1em',
-                                            fontWeight: 500}}>
-                                Geographic Iinformation System and Remote sensing Services.
-                              </span>
-                              <span style={{padding: '0em 1em 1em 1em', textAlign: 'left'}}>
-                                 <p>
-                                 Supply and Analysis of Remotely Sensed Data.
-                                 </p>
-                                 <p>
-                                 Implementing Functional GIS/Remote Sensing Units.
-                                 </p>
-                                 <p>
-                                 Mapping Services.
-                                 </p>
-                                 <p>
-                                 Training.
-                                 </p>
-                              </span>
-                            </div>
-                            
-                        </Paper>
-                    </Grid>
-
-                    <Grid item xs={12} sm={4}>
+                    <ScrollAnimation animateIn='fadeIn'>
                         <Paper className={classes.paper}>
                             <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591365706/panchroconsult/planning_g3hd6b.jpg"
                                   width="100%" height="250px" className={classes.img}/>
@@ -160,6 +167,7 @@ guidelines.
                             </div>
                             
                         </Paper>
+                        </ScrollAnimation>
                     </Grid>
 
                 </Grid>

@@ -9,6 +9,10 @@ import * as colors from '../assets/color'
 import AboutUs from "../components/content/aboutus";
 import Services from "../components/content/services";
 import ContactUs from "../components/content/contact";
+import Projects from "../components/content/projects";
+import FooterContainer from "../components/content/footerComponent";
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 const useStyles = makeStyles({
   headerWrapper: {
@@ -26,7 +30,7 @@ export default function Home() {
       <Head>
         <title>Skye Taxis | Airport and Hotel transfers made easy</title>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://res.cloudinary.com/jewelworth/image/upload/v1591395079/panchroconsult/rsz_panchroconsult-logo_mini_asofzm.png" />
         <link rel="stylesheet" href="assets/styles.css"></link>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
 
@@ -39,30 +43,33 @@ export default function Home() {
         <SubHeaderContainer/>
        </div>
 
-         <div style={{marginTop: '2em', fontSize: '1.2em', }}>
+         <div id="about" style={{marginTop: '2em', fontSize: '1.2em', }}>
              <AboutUs/>
          </div>
 
-         <div style={{marginTop: '2em', fontSize: '1.2em'}}>
+         <div id="service" style={{marginTop: '2em', fontSize: '1.2em'}}>
              <Services/>
          </div>
-         <div style={{marginTop: '2em', fontSize: '1.2em', backgroundColor: colors.backgroungFaint}}>
+         <div id="contact" style={{marginTop: '2em', fontSize: '1.2em', backgroundColor: colors.backgroungFaint}}>
              <ContactUs/>
+         </div>
+         <div id="projects" style={{marginTop: '2em', fontSize: '1.2em'}}>
+             <Projects/>
          </div>
        
       
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591316466/panchroconsult/Panchroconsult-logo_mini_xdhixj.png" 
-                                              style={{maxWidth: "8rem"}}/>
-        </a>
-      </footer>
+        <FooterContainer/>
 
+        <div className="scrollTop">
+                    <Fab style={{color: colors.mainSecondaryColor}} aria-label="edit">
+                       <a href="#top">
+                       <KeyboardArrowUpIcon />
+                      </a>
+                    </Fab>
+        </div>
+        
+      </footer>
      <style jsx>{`
         .container {
     min-height: 100vh;
@@ -84,7 +91,6 @@ export default function Home() {
 
   footer {
     width: 100vw;
-    border-top: 1px solid #eaeaea;
     position: 'absolute';
     bottom: '0px'
   }
@@ -200,6 +206,7 @@ export default function Home() {
           font-family: 'Poppins', sans-serif;
           font-weight: 300;
           font-size: 0.9rem;
+          scroll-behavior: smooth;
         }
         h1{
           font-size: 1.5rem;
@@ -214,6 +221,18 @@ export default function Home() {
         }
         * {
           box-sizing: border-box;
+        }
+        .scrollTop {
+          display: block; /* Hidden by default */
+          position: fixed; /* Fixed/sticky position */
+          bottom: 20px; /* Place the button at the bottom of the page */
+          right: 30px; /* Place the button 30px from the right */
+          z-index: 99; /* Make sure it does not overlap */
+          border: none; /* Remove borders */
+          outline: none; /* Remove outline */
+          color: white; /* Text color */
+          cursor: pointer; /* Add a mouse pointer on hover */
+
         }
       `}</style>
     </React.Fragment>

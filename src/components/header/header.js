@@ -100,7 +100,7 @@ const  HeaderContainer = (props, store) => {
               <div style={{display: 'flex'}}>
 
                 <Grid item xs={8} md={10}>
-                    <div style={{display: 'flex'}}>
+                    <div id="top" style={{display: 'flex'}}>
                           <div>
                             +2348023888504
                           </div>
@@ -137,44 +137,59 @@ const  HeaderContainer = (props, store) => {
                     
                             <div style={{display: 'flex', alignItems: "center"}}>
                                     <div>
-                                        <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591316466/panchroconsult/Panchroconsult-logo_mini_xdhixj.png" 
+                                      <a href="#">
+                                         <img src="https://res.cloudinary.com/jewelworth/image/upload/v1591316466/panchroconsult/Panchroconsult-logo_mini_xdhixj.png" 
                                               style={{maxWidth: "7rem"}}/>
+                                      </a>
+                          
                                     </div>
                             </div>
                             
                             <div>
                             <Hidden mdDown>
-                                    Home
+                              <a href="/">
+                                Home
+                              </a>
                             </Hidden>
                             </div>
                             
                             <div>
                             <Hidden mdDown>
-                                    About Us
+                              <a href="#about">
+                                About Us
+                              </a>
                             </Hidden>
                             </div>
 
                             <div>
                             <Hidden mdDown>
-                                    Contact
+                                <a href="#service">
+                                  Service
+                                </a>
                             </Hidden>
                             </div>
 
                             <div>
                             <Hidden mdDown>
-                                    Portfolio
+                                <a href="#service">
+                                  Contact
+                                </a>
                             </Hidden>
                             </div>
 
                             <div>
                             <Hidden mdDown>
+                                    <a href="#projects">
                                     Projects
+                                    </a>
                             </Hidden>
                             </div>
 
                             <div>
                             <Hidden mdDown>
-                                    Blog
+                                <a href="#">
+                                  Blog
+                                </a>
                             </Hidden>
                             </div>
                     </div>
@@ -207,33 +222,44 @@ const  HeaderContainer = (props, store) => {
 
                             
                             <div className={classes.mobileMenuItem}>
-                                    Home
+                                <a href="/">
+                                  Home
+                                </a>
                             </div>
                             
                             <div className={classes.mobileMenuItem}>
-                                    About Us
+                                <a href="#about" onClick={() => menuToggleFunction()}>
+                                  About Us
+                                </a>
                             </div>
 
                             <div className={classes.mobileMenuItem}>
-                                    Contact
+                                  <a href="#service" onClick={() => menuToggleFunction()}>
+                                  Service
+                                </a>
                             </div>
 
                             <div className={classes.mobileMenuItem}>
-                                    Portfolio
+                                <a href="#contact" onClick={() => menuToggleFunction()}>
+                                  Contact
+                                </a>
                             </div>
 
                             <div className={classes.mobileMenuItem}>
-                                    Projects
+                                <a href="#projects" onClick={() => menuToggleFunction()}>
+                                  Projects
+                                </a>
                             </div>
 
-                            <div className={classes.mobileMenuItem}>
+                            <div href="#" className={classes.mobileMenuItem}>
                                     Blog
                             </div>
                             <div className={classes.button1} style={{fontSize: "1.2rem", 
                                                                      padding: "0.9rem 1.8rem",
                                                                      justifyContent: "center",
                                                                      display: "flex",
-                                                                     marginTop: '3em'}}>
+                                                                     marginTop: '3em',
+                                                                     boxShadow: `1px 1px 1px 1px ${colors.white}`,}}>
                                    Newsletters
                             </div>
                         </Paper>

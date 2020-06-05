@@ -13,8 +13,7 @@ import {Animated} from "react-animated-css";
 import MyLocationIcon from '@material-ui/icons/MyLocation';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';
-import GoogleMapReact from 'google-map-react';
-import { google_key } from '../../assets/constants';
+
 
 const useStyles = makeStyles({
     content: {
@@ -54,17 +53,17 @@ const  ContactUs = (props, store) => {
     }
 
     const center = {
-        lat: 6.53,
-        lng: 9.62
+        lat:  9.62,
+        lng: 6.53
       };
 
-    const zoom = 11;
+    const zoom = 13;
 
     return (
       <React.Fragment>
         <div className={classes.content}>
             <Container maxWidth="lg">
-               <h1 style={{marginBottom: '1.2em', textAlign: 'center'}}>
+               <h1 style={{marginBottom: '1.2em', textAlign: 'center', marginTop: '1em'}}>
                  Here's <span style={{color: colors.mainPrimaryColor, fontSize: '1.4em'}}>
                  our contact</span>
                </h1>
@@ -102,18 +101,7 @@ const  ContactUs = (props, store) => {
                     </Grid>
 
                     <Grid item xs={12} sm={6}>
-                    <div style={{ height: '100%', width: '100%' }}>
-                        <GoogleMapReact
-                        bootstrapURLKeys={{ key: google_key }}
-                        defaultCenter={center}
-                        defaultZoom={zoom}
-                        >
-                            <div
-                                lat={6.537371}
-                                lng={9.623054}
-                            ></div>
-                        </GoogleMapReact>
-                     </div>
+                   
                     </Grid>
                 </Grid>
             </Container>   
