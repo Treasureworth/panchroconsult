@@ -8,8 +8,6 @@ import {openMobileMenu} from "../../utils/actions/index";
 import * as colors from '../../assets/color'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
-import {Animated} from "react-animated-css";
 
 const useStyles = makeStyles({
     content: {

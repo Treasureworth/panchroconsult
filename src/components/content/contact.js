@@ -9,7 +9,6 @@ import * as colors from '../../assets/color'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
-import {Animated} from "react-animated-css";
 import MyLocationIcon from '@material-ui/icons/MyLocation';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';

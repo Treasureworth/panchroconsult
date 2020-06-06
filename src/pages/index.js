@@ -62,11 +62,11 @@ export default function Home() {
         <FooterContainer/>
 
         <div className="scrollTop">
+                <a href="#home">
                     <Fab style={{color: colors.mainSecondaryColor}} aria-label="edit">
-                       <a href="#top">
                        <KeyboardArrowUpIcon />
-                      </a>
                     </Fab>
+                </a>
         </div>
         
       </footer>

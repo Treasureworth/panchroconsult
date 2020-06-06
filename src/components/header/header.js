@@ -100,7 +100,7 @@ const  HeaderContainer = (props, store) => {
               <div style={{display: 'flex'}}>
 
                 <Grid item xs={8} md={10}>
-                    <div id="top" style={{display: 'flex'}}>
+                    <div id="home" style={{display: 'flex'}}>
                           <div>
                             +2348023888504
                           </div>

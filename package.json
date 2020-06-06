@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "webpack --mode production",
-    "start": "next start"
+    "start": "next start",
+    "prod": "next export"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.14",
