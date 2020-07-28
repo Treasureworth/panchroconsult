@@ -4,7 +4,7 @@ import Container from '@material-ui/core/Container';
 import {useDispatch, useSelector} from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
-import {openMobileMenu} from "../../utils/actions/index";
+import {openMobileMenu} from "../../../panchroconsult/src/utils/actions/index";
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import CancelIcon from '@material-ui/icons/Cancel';
